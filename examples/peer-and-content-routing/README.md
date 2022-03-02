@@ -51,6 +51,18 @@ await Promise.all([
   node2.dial(node3.peerId)
 ])
 
+/*
+* A delay function
+*
+* @param {Number} waitInMs - Time for the delay
+* @returns Promise
+*/
+const delay = (waitInMs) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, waitInMs);
+  });
+};
+
 // Set up of the cons might take time
 await delay(100)
 
